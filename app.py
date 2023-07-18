@@ -3,6 +3,7 @@ from datetime import datetime
 
 import openai
 import json
+import os
 
 
 
@@ -57,4 +58,5 @@ def get_bot_response():
 
 
 if __name__ == "__main__":
-    app.run()
+    port=int(os.environ.get("PORT", 3000))
+    app.run(host="0.0.0.0", port=port)
