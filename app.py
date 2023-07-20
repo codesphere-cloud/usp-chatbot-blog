@@ -18,8 +18,6 @@ f.close()
 def chatbot_response(question):
     input_data=[
     {"role": "system", "content" : str("You are a chatbot on codespheres website.You need to compare codesphere with alternatives in 3 short bullet points. With the following context:\n"+onepager_developer)},
-    {"role": "user", "content" : "How are you?"},
-    {"role": "assistant", "content" : "I am doing well"},
     {"role":"user", "content": str(question)}]
 
     completion = openai.ChatCompletion.create(
@@ -35,11 +33,10 @@ def chatbot_response(question):
         response=data["message"]["content"]
         response=response.replace("\n", "<br>")
     else:
-        response="An Error occured."
+        response="An error occurred."
 
 
     return response
-
 
 
 app = Flask(__name__)
@@ -54,7 +51,8 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    return chatbot_response(userText)
+    response = chatbot_response(userText)
+    return response
 
 
 if __name__ == "__main__":
