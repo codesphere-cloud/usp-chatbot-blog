@@ -3,16 +3,18 @@ Can we teach the required knowledge to a LLM model and build a chatbot that answ
 Let's find out.
 
 ## Getting Started in Codesphere
+Make sure you add your open AI key as environment variable `OPENAI_KEY`.
 
-To run the development server:
+Then, to run the development server:
 
 1. Run the ci prepare stage
 2. Run the ci run stage
 3. Open the deployment 
 
 ## Gettin Started Locally 
+Make sure you add your open AI key as environment variable `OPENAI_KEY`.
 
-To run the development server:
+Then, to run the development server:
 
 ```bash
 pipenv install
