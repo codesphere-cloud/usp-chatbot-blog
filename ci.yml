@@ -1,0 +1,10 @@
+prepare:
+  steps:
+    - name: Install dependencies
+      command: pipenv install
+test:
+  steps: []
+run:
+  steps:
+    - name: run
+      command: pipenv run python app.py

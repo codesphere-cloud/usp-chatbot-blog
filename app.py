@@ -7,7 +7,7 @@ import os
 
 
 
-openai.api_key = ""
+openai.api_key = os.environ.get('OPENAI_KEY')
 
 f=open("onepager_developer.txt", "r")
 onepager_developer=f.read()
